@@ -87,7 +87,7 @@ public class LinkedList
 
     public LinkedList Pop()
     {
-        if (this.Head != Head)
+        if (this.Head == null)
         {
             return null;
         }
@@ -128,8 +128,27 @@ public class LinkedList
         this.Length++;
         return this;
 
+    }
 
+    public LinkedList Shift()
+    {
+        if (this.Head == null)
+        {
+            return null;
+        }
+        else
+        {
+            var temp = this.Head;
+            this.Head = this.Head.Next;
+            temp.Next = null;
+            this.Length--;
+        }
+        if (this.Length == 0)
+        {
+            this.Tail = null;
+        }
 
+        return this; 
     }
 } 
 

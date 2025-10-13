@@ -1,18 +1,16 @@
 ﻿
 
 
-LinkedList myLinkedList = new LinkedList(11);
-myLinkedList.Push(value: 3);
-myLinkedList.Push(value: 23);
-myLinkedList.Push(value: 7);
+LinkedList myLinkedList = new LinkedList(2);
+myLinkedList.Push(value: 1);
+myLinkedList.Shift();
 
-myLinkedList.Unshift(4);
-
-myLinkedList.GetHead();
+myLinkedList.GetHead(); 
 myLinkedList.GetTail();
 myLinkedList.GetLength();
-
+ 
 Console.WriteLine("\nLinked List:");
 myLinkedList.PrintList();
 
 
+  
