@@ -111,6 +111,26 @@ public class LinkedList
 
         return this;
     }
+
+    public LinkedList Unshift(int value)
+    {
+        Node newNode = new Node(value);
+        if (this.Head != Head)
+        {
+            this.Head = newNode;
+            this.Tail = newNode;
+        }
+        else
+        {
+            newNode.Next = this.Head;
+            this.Head = newNode;
+        }
+        this.Length++;
+        return this;
+
+
+
+    }
 } 
 
 
