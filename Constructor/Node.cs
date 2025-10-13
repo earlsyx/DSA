@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 public class Node
 {
@@ -64,6 +65,26 @@ public class LinkedList
     {
         Console.WriteLine($"Length: {Length}");
     }
+
+
+    public LinkedList Push(int value)
+    {
+        Node newNode = new Node(value);
+
+        if(this.Head != Head)
+        {
+            Head = newNode;
+            Tail = newNode;
+        }
+        else
+        {
+            this.Tail.Next = newNode;
+            this.Tail = newNode;
+        }
+        this.Length++;
+        return this;
+    }
 }
+
 
 
