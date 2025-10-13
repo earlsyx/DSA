@@ -78,13 +78,40 @@ public class LinkedList
         }
         else
         {
-            this.Tail.Next = newNode;
+            this.Tail.Next = newNode; 
             this.Tail = newNode;
         }
         this.Length++;
         return this;
     }
-}
+
+    public LinkedList Pop()
+    {
+        if (this.Head != Head)
+        {
+            return null;
+        }
+
+        var temp = this.Head;
+        var pre = this.Head;
+
+        while (temp.Next != null)
+        {
+            pre = temp;
+            temp = temp.Next;
+        }
+        this.Tail = pre;
+        this.Tail.Next = null;
+        this.Length--;
+        if (this.Length == 0)
+        {
+            this.Head = null;
+            this.Tail = null;
+        }
+
+        return this;
+    }
+} 
 
 
 
