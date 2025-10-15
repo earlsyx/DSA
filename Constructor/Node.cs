@@ -150,6 +150,8 @@ public class LinkedList
 
         return this; 
     }
+
+    //Next would be =unshift
 } 
 
 
